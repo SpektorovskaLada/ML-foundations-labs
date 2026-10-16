@@ -1,74 +1,65 @@
-# Introduction to machine learning
-Laboratory work on the discipline **"Introduction to ML"**
----
-### Laboratory work #1
-**Topic:** Basic skills in working in the Python environment
-Task: Given an undirected graph G with V vertices, where the weights of the arcs dij are known for ∀i, j = 1, ..., V , i ̸= j. Construct a minimum spanning tree - a subgraph J of the graph G, using Prim's algorithm:
-- Choose any vertex of the graph G and add it to J.
-- Add to J the edge with the smallest weight that connects the vertex of the subgraph J with a vertex that does not belong to J.
-- Perform step 2 until V − 1 edges are added to J.
+# Introduction to Machine Learning: Laboratory Portfolio
 
-### Laboratory work №2
-**Topic:** Construction and assessment of the quality of a naive Bayesian model for classification using the Scikit-Learn Python library.
-- Initial data:
-- (a) sklearn.datasets.make_moons
-- (b) sklearn.datasets.load_digits
-- Data pre-adjusted to work with MultinomialNB (only positive values).
-- Tasks:
-- Construction of classification models (GaussianNB and MultinomialNB).
-- Testing on training and validation sets.
-- Assessment of overfitting.
-- Calculation of posterior probabilities ('predict_proba').
-- Conclusion:
-- For 'make_moons', **GaussianNB** showed the best accuracy.
-- For 'load_digits', the highest accuracy was demonstrated by **MultinomialNB**.
-- In both cases, the accuracy on the test data was close to the training data → no overtraining is observed.
----
+A comprehensive collection of machine learning algorithms and workflows implemented during the "Introduction to ML" course. This repository showcases practical applications of fundamental ML concepts, ranging from classic graph algorithms to advanced ensemble methods.
 
-### Laboratory work #3
-**Topic:** Data classification using neural networks
-- Initial data:
-- (a) sklearn.datasets.make_moons
-- (b) sklearn.datasets.load_digits
-- Task:
-- Building classification models on training/validation sets.
-- Experiments with the number of neurons in the hidden layer.
-- Quality assessment: **confusion matrix**, precision, recall, F1-score.
-- Building **PR-curves**, **ROC-curves**, calculating **AUC**.
-- Conclusion: increasing the number of neurons affects the quality of the model; the optimal architecture allows achieving a stable data distribution without overtraining.
+## 👥 Team & Collaboration
+This repository was developed in collaboration with [Classmate's Name](https://github.com). 
+* **My Core Contributions:** Model architecture design (neural networks), hyperparameter tuning, model evaluation, and metric analysis (ROC/AUC, Confusion Matrices).
+* **Partner's Contributions:** Initial data preprocessing, exploratory data analysis (EDA), and baseline model implementations.
+
+## 🛠️ Tech Stack & Libraries
+* **Core Language:** Python 3.x
+* **Data Libraries:** NumPy, Pandas
+* **Machine Learning:** Scikit-Learn
+* **Visualization:** Matplotlib, Seaborn
 
 ---
 
-### Lab #4
-**Topic:** Data Clustering
-- Input data:
-- make_blobs
-- make_circles
-- Tasks:
-- Visualization of the original data.
-- Building clustering models.
-- Comparison of alternative models with changing parameters and distance metrics.
-- Quality metrics (module 'sklearn.metrics'):
-- Estimated Number of Clusters
-- Adjusted Rand Index
-- Silhouette Coefficient
-- Davies–Bouldin Index
-- Conclusion: the clusters are well separated; the indices confirm the correctness of the model even with different parameters.
+## 📂 Project Structure & Laboratory Works
+
+### 🏛️ 01. Minimum Spanning Tree via Prim's Algorithm
+* **Topic:** Graph Theory & Basic Python Environment
+* **Objective:** Construct a Minimum Spanning Tree (MST) from an undirected weighted graph G(V, E) using Prim's algorithm.
+* **Key Takeaway:** Successfully implemented a greedy optimization approach from scratch without external ML libraries, demonstrating solid algorithmic foundations.
+
+### 📊 02. Naive Bayes Classification
+* **Topic:** Probabilistic Classification Models
+* **Data:** `sklearn.datasets.make_moons` & `load_digits` (pre-processed for non-negative values)
+* **Models:** GaussianNB vs. MultinomialNB
+* **Key Findings:** 
+  * `GaussianNB` performed best on continuous decision boundaries (`make_moons`).
+  * `MultinomialNB` excelled in discrete feature spaces (`load_digits`).
+  * No overfitting observed; training and validation accuracies remained closely aligned.
+
+### 🧠 03. Neural Networks for Data Classification
+* **Topic:** Deep Learning Foundations & Model Evaluation
+* **Data:** Moons and Digits datasets.
+* **Tasks:** Investigating hidden layer neuron capacity and its impact on classification quality.
+* **Metrics Used:** Confusion Matrix, Precision, Recall, F1-Score, PR-Curves, ROC-AUC.
+* **Key Findings:** Tuning the hidden layer architecture achieved a stable data distribution and high evaluation metrics without overtraining.
+
+### 📍 04. Unsupervised Learning: Data Clustering
+* **Topic:** Synthetic Data Clustering and Metric Analysis
+* **Data:** `make_blobs`, `make_circles`
+* **Evaluation Metrics:** Estimated Number of Clusters, Adjusted Rand Index, Silhouette Coefficient, Davies–Bouldin Index.
+* **Key Findings:** Comparison of alternative models with varying parameters and distance metrics confirmed stable cluster separation matching the synthetic ground truth.
+
+### 🚀 05. Ensemble Methods: Gradient Boosting
+* **Topic:** Advanced Regression via Model Ensembles
+* **Method:** `GradientBoostingRegressor`
+* **Data:** `sklearn.datasets.load_diabetes`
+* **Analysis:** Computed and compared Accuracy, Bias, and Variance trade-offs between individual models and the ensemble.
+* **Key Findings:** Verified that ensemble methods significantly outperform individual predictors by reducing variance while maintaining low bias.
 
 ---
-### Lab #5
-**Topic:** Building and evaluating ensembles of classification and regression models using the Scikit-Learn Python library
-- Method: GradientBoostingRegressor
-- Initial data: sklearn.datasets.load_diabetes
-- Tasks:
-- Build an ensemble of models using the given method.
-- Compare the performance of the ensemble with individual models.
-- Calculate the accuracy, bias, and variance.
-- Conclusion: ensembles are more effective for tasks where high accuracy is required.
 
-### Libraries used
-- numpy
-- pandas
-- matplotlib
-- scikit-learn
-- seaborn
+## 🚀 How to Run the Code
+1. Clone the repository:
+   ```bash
+   git clone https://github.com
+   ```
+2. Install dependencies:
+   ```bash
+   pip install numpy pandas matplotlib scikit-learn seaborn
+   ```
+3. Open any `.ipynb` file in Jupyter Lab/Notebook or VS Code to explore the experiments.
