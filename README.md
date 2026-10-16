@@ -3,7 +3,7 @@
 A comprehensive collection of machine learning algorithms and workflows implemented during the "Introduction to ML" course. This repository showcases practical applications of fundamental ML concepts, ranging from classic graph algorithms to advanced ensemble methods.
 
 ## 👥 Team & Collaboration
-This repository was developed in collaboration with [Classmate's Name](https://github.com). 
+This repository was developed in collaboration with Forin Dmytro. 
 * **My Core Contributions:** Model architecture design (neural networks), hyperparameter tuning, model evaluation, and metric analysis (ROC/AUC, Confusion Matrices).
 * **Partner's Contributions:** Initial data preprocessing, exploratory data analysis (EDA), and baseline model implementations.
 
